@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>StreetPlay for street musician</title>
+
+	<script src="extlib/react/react.js"></script>
+	<script src="extlib/reactDOM/react-dom.js"></script>
+	<script src="extlib/systemjs/system.js"></script>
+
+	<link rel="stylesheet" href="extlib/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+</head>
+<body class="landing">
+	<div id="page-wrapper"></div>
+	<script>
+        System.config({
+            defaultExtentions: true,
+            path: {
+                'npm:': 'node_modules/'
+            },
+            map: {
+                'react': 'npm:react/dist/react.js',
+                'react-dom': 'npm:react-dom/dist/react-dom.js'
+            }
+        });
+        System.import('App.bundle.js');
+
+        function openApp(bundleName) {
+            System.delete(System.normalizeSync(bundleName));
+            console.log(bundleName + ' has loaded');
+            System.import(bundleName).then(null, console.error.bind(console));
+        }
+	</script>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
