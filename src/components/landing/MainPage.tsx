@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { APP_NAME, MAIN_APP_DESCRIPTION, MAIN_APP_TITLE } from './const/const';
-import { headerStyle } from './styled';
+import { APP_NAME, MAIN_APP_DESCRIPTION, MAIN_APP_TITLE } from '../../const/const';
+import { headerStyle } from '../../styled';
 
-class LandingPage extends React.Component<MyWrapperProps, MyWrapperState> {
+class MainPage extends React.Component<MyWrapperProps, MyWrapperState> {
   constructor( props: MyWrapperProps ) {
     super( props );
     this.state = {
@@ -93,8 +93,8 @@ class LandingPage extends React.Component<MyWrapperProps, MyWrapperState> {
               <h2>Виктор Гистраистов</h2>
               ★★★★<br/><br/>
               <p><strong>Жанр:</strong> музыка, игра на гитаре<br/>
-              <strong>Город:</strong> Зеленодольск<br/>
-              <strong>Описание:</strong> Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet.
+                <strong>Город:</strong> Зеленодольск<br/>
+                <strong>Описание:</strong> Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet.
                 Mauris eleifend fringilla nullam aenean mi ligula.</p>
             </div>
           </section>
@@ -104,8 +104,8 @@ class LandingPage extends React.Component<MyWrapperProps, MyWrapperState> {
               <h2>Уличный жонглер Миша</h2>
               ★★★★★<br/><br/>
               <p><strong>Жанр:</strong> Эквилибристика, жонглирование<br/>
-              <strong>Город:</strong> Чистополь<br/>
-              <strong>Описание:</strong> Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet.
+                <strong>Город:</strong> Чистополь<br/>
+                <strong>Описание:</strong> Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet.
                 Mauris eleifend fringilla nullam aenean mi ligula.</p>
             </div>
           </section>
@@ -115,8 +115,8 @@ class LandingPage extends React.Component<MyWrapperProps, MyWrapperState> {
               <h2>Мим команда "Bug-makers"</h2>
               ★★★<br/><br/>
               <p><strong>Жанр:</strong> Мим шоу<br/>
-              <strong>Город:</strong> Казань<br/>
-              <strong>Описание:</strong> Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet.
+                <strong>Город:</strong> Казань<br/>
+                <strong>Описание:</strong> Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet.
                 Mauris eleifend fringilla nullam aenean mi ligula.</p>
             </div>
           </section>
@@ -126,8 +126,8 @@ class LandingPage extends React.Component<MyWrapperProps, MyWrapperState> {
               <h2>Владимир П.</h2>
               ★★★<br/><br/>
               <p><strong>Жанр:</strong> музыка, игра на саксофоне<br/>
-              <strong>Город:</strong> Казань<br/>
-              <strong>Описание:</strong> Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet.
+                <strong>Город:</strong> Казань<br/>
+                <strong>Описание:</strong> Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet.
                 Mauris eleifend fringilla nullam aenean mi ligula.</p>
             </div>
           </section>
@@ -137,12 +137,95 @@ class LandingPage extends React.Component<MyWrapperProps, MyWrapperState> {
               <h2>Семён Сёмёнович Сёмёнов</h2>
               ★★★★★<br/><br/>
               <p><strong>Жанр:</strong> музыка, игра на виолонченли<br/>
-              <strong>Город:</strong> Дербышки<br/>
-              <strong>Описание:</strong> Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet.
+                <strong>Город:</strong> Дербышки<br/>
+                <strong>Описание:</strong> Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet.
                 Mauris eleifend fringilla nullam aenean mi ligula.</p>
             </div>
           </section>
         </section>
+
+        {/*<!-- Three -->*/}
+        <section id="three" className="wrapper style3 special">
+          <div className="inner">
+            <header className="major">
+              <h2>Возможности сервиса</h2>
+            </header>
+            <p>
+              <div className="row">
+                <div className="6u 12u$(medium)">
+                  <h5>Зритель</h5>
+                </div>
+                <div className="6u$ 12u$(medium)">
+                  <h5>Артист</h5>
+                </div>
+              </div>
+            </p>
+
+            <ul className="features">
+              <li className="icon fa-search">
+                <h3>Ищите артистов</h3>
+                <p>Каждый посетитель может на сайте найти места выступлений артистов</p>
+              </li>
+              <li className="icon fa-globe">
+                <h3>Покажите места</h3>
+                <p>Добавляйте на карту места ваших выступлений</p>
+              </li>
+              <li className="icon fa-star">
+                <h3>Подписывайтесь</h3>
+                <p>Добавляйте артистов в избранное и следите за их выступлениями</p>
+              </li>
+              <li className="icon fa-headphones">
+                <h3>Находите зрителей</h3>
+                <p>Продвигайте свои выступления среди зрителей</p>
+              </li>
+              <li className="icon fa-heart-o">
+                <h3>Следите за расписанием</h3>
+                <p>И получайте уведомления о выступлениях артистов</p>
+              </li>
+              <li className="icon fa-flag-o">
+                <h3>Зарабатывайте деньги!</h3>
+                <p>Чем лучше выступление, тем больше денег</p>
+              </li>
+              <li className="icon fa-heart-o">
+                <h3>Благодарите артистов деньгами!</h3>
+                <p>Переводите им взносы прямо со своей карты</p>
+              </li>
+              <li className="icon fa-flag-o">
+                <h3>Статистика</h3>
+                <p>В личном кабинете можно смотреть статистику по местам, мероприятиям и оплатам</p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        {/*<!-- CTA -->*/}
+        <section id="cta" className="wrapper style4">
+          <div className="inner">
+            <header>
+              <h2>Arcue ut vel commodo</h2>
+              <p>(className="wrapper style4")</p>
+              <p>Aliquam ut ex ut augue consectetur interdum endrerit imperdiet amet eleifend fringilla.</p>
+            </header>
+            <ul className="actions vertical">
+              <li><a href="#" className="button fit special">Activate</a></li>
+              <li><a href="#" className="button fit">Learn More</a></li>
+            </ul>
+          </div>
+        </section>
+
+        {/*<!-- Footer -->*/}
+        <footer id="footer">
+          <ul className="icons">
+            <li><a href="#" className="icon fa-twitter"><span className="label">Twitter</span></a></li>
+            <li><a href="#" className="icon fa-facebook"><span className="label">Facebook</span></a></li>
+            <li><a href="#" className="icon fa-instagram"><span className="label">Instagram</span></a></li>
+            <li><a href="#" className="icon fa-dribbble"><span className="label">Dribbble</span></a></li>
+            <li><a href="#" className="icon fa-envelope-o"><span className="label">Email</span></a></li>
+          </ul>
+          <ul className="copyright">
+            <li>&copy; {APP_NAME} Company 2017</li>
+          </ul>
+        </footer>
 
         {/*<!-- Three -->*/}
         <section id="three" className="wrapper style3 special">
@@ -682,4 +765,4 @@ class LandingPage extends React.Component<MyWrapperProps, MyWrapperState> {
   }
 }
 
-export default LandingPage;
+export default MainPage;

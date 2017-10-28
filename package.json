@@ -17,10 +17,8 @@
     "video-react": "^0.8.8"
   },
   "scripts": {
-    "start": "start",
     "build": "npm run clean && webpack --progress --display-error-details --colors",
     "test": "test --env=jsdom",
-    "eject": "eject",
     "clean": "rimraf dist"
   },
   "devDependencies": {

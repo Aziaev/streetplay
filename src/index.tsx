@@ -1,8 +1,8 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import LandingPage from './LandingPage';
+import MainPage from './components/landing/MainPage';
 
 ReactDOM.render(
-    <LandingPage drawerOpened={false} logged={false}/>,
+    <MainPage drawerOpened={false} logged={false}/>,
     document.getElementById('page-wrapper') as HTMLElement
 );
