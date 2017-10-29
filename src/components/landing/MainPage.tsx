@@ -178,19 +178,19 @@ class MainPage extends React.Component<MyWrapperProps, MyWrapperState> {
                 <h3>Находите зрителей</h3>
                 <p>Продвигайте свои выступления среди зрителей</p>
               </li>
-              <li className="icon fa-heart-o">
+              <li className="icon fa-credit-card">
+                <h3>Благодарите артистов деньгами!</h3>
+                <p>Переводите им взносы прямо со своей карты просканировав QR-код артиста на выступлении</p>
+              </li>
+              <li className="icon fa-money">
+                <h3>Зарабатывайте деньги!</h3>
+                <p>Чем лучше выступление, тем больше денег. Зрители перечисляют деньги по вашему QR-коду</p>
+              </li>
+              <li className="icon fa-calendar-check-o">
                 <h3>Следите за расписанием</h3>
                 <p>И получайте уведомления о выступлениях артистов</p>
               </li>
-              <li className="icon fa-flag-o">
-                <h3>Зарабатывайте деньги!</h3>
-                <p>Чем лучше выступление, тем больше денег</p>
-              </li>
-              <li className="icon fa-heart-o">
-                <h3>Благодарите артистов деньгами!</h3>
-                <p>Переводите им взносы прямо со своей карты</p>
-              </li>
-              <li className="icon fa-flag-o">
+              <li className="icon fa-line-chart">
                 <h3>Статистика</h3>
                 <p>В личном кабинете можно смотреть статистику по местам, мероприятиям и оплатам</p>
               </li>
