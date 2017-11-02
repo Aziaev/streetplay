@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { APP_NAME, MAIN_APP_DESCRIPTION, MAIN_APP_TITLE } from '../../const/const';
-import { headerStyle } from '../../styled';
+import { headerStyle } from '../../style/index';
 
 class MainPage extends React.Component<MyWrapperProps, MyWrapperState> {
   constructor( props: MyWrapperProps ) {
@@ -198,20 +198,113 @@ class MainPage extends React.Component<MyWrapperProps, MyWrapperState> {
           </div>
         </section>
 
+        <article id="map">
+          <section className="wrapper style5">
+            <div className="inner">
+              <header>
+                <h2>Карта</h2>
+                <p>Aliquam ut ex ut interdum donec amet imperdiet eleifend</p>
+              </header>
+
+
+              <h3>Lorem ipsum dolor</h3>
+              <p>Morbi mattis mi consectetur tortor elementum, varius pellentesque velit convallis. Aenean tincidunt
+                lectus auctor mauris maximus, ac scelerisque ipsum tempor. Duis vulputate ex et ex tincidunt, quis
+                lacinia velit aliquet. Duis non efficitur nisi, id malesuada justo. Maecenas sagittis felis ac sagittis
+                semper. Curabitur purus leo, tempus sed finibus eget, fringilla quis risus. Maecenas et lorem quis sem
+                varius sagittis et a est. Maecenas iaculis iaculis sem. Donec vel dolor at arcu tincidunt bibendum.
+                Interdum et malesuada fames ac ante ipsum primis in faucibus. Fusce ut aliquet justo. Donec id neque
+                ipsum. Integer eget ultricies odio. Nam vel ex a orci fringilla tincidunt. Aliquam eleifend ligula non
+                velit accumsan cursus. Etiam ut gravida sapien.</p>
+
+              <p>Vestibulum ultrices risus velit, sit amet blandit massa auctor sit amet. Sed eu lectus sem. Phasellus
+                in odio at ipsum porttitor mollis id vel diam. Praesent sit amet posuere risus, eu faucibus lectus.
+                Vivamus ex ligula, tempus pulvinar ipsum in, auctor porta quam. Proin nec dui cursus, posuere dui eget
+                interdum. Fusce lectus magna, sagittis at facilisis vitae, pellentesque at etiam. Quisque posuere leo
+                quis sem commodo, vel scelerisque nisi scelerisque. Suspendisse id quam vel tortor tincidunt suscipit.
+                Nullam auctor orci eu dolor consectetur, interdum ullamcorper ante tincidunt. Mauris felis nec felis
+                elementum varius.</p>
+            </div>
+          </section>
+        </article>
+
         {/*<!-- CTA -->*/}
         <section id="cta" className="wrapper style4">
           <div className="inner">
             <header>
-              <h2>Arcue ut vel commodo</h2>
-              <p>(className="wrapper style4")</p>
-              <p>Aliquam ut ex ut augue consectetur interdum endrerit imperdiet amet eleifend fringilla.</p>
+              <h2>Начните пользоваться приложением сейчас!</h2>
+              <p>Нажмите кнопку, зарегистрируйтесь и вперед</p>
             </header>
             <ul className="actions vertical">
-              <li><a href="#" className="button fit special">Activate</a></li>
-              <li><a href="#" className="button fit">Learn More</a></li>
+              <li><a href="#" className="button fit special">Начать</a></li>
+              <li><a href="#" className="button fit">Почитать еще</a></li>
             </ul>
           </div>
         </section>
+
+        {/*<!-- Feedback -->*/}
+        <article id="map">
+          <section className="wrapper style5">
+            <div className="inner">
+              <h4>Form</h4>
+              <form method="post" action="#">
+                <div className="row uniform">
+                  <div className="6u 12u$(xsmall)">
+                    <input type="text" name="demo-name" id="demo-name" value="" placeholder="Name"/>
+                  </div>
+                  <div className="6u$ 12u$(xsmall)">
+                    <input type="email" name="demo-email" id="demo-email" value="" placeholder="Email"/>
+                  </div>
+                  <div className="12u$">
+                    <div className="select-wrapper">
+                      <select name="demo-category" id="demo-category">
+                        <option value="">- Category -</option>
+                        <option value="1">Manufacturing</option>
+                        <option value="1">Shipping</option>
+                        <option value="1">Administration</option>
+                        <option value="1">Human Resources</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div className="4u 12u$(small)">
+                    <input type="radio" id="demo-priority-low" name="demo-priority" checked/>
+                    <label htmlFor="demo-priority-low">Low</label>
+                  </div>
+                  <div className="4u 12u$(small)">
+                    <input type="radio" id="demo-priority-normal" name="demo-priority"/>
+                    <label htmlFor="demo-priority-normal">Normal</label>
+                  </div>
+                  <div className="4u$ 12u$(small)">
+                    <input type="radio" id="demo-priority-high" name="demo-priority"/>
+                    <label htmlFor="demo-priority-high">High</label>
+                  </div>
+                  <div className="6u 12u$(small)">
+                    <input type="checkbox" id="demo-copy" name="demo-copy"/>
+                    <label htmlFor="demo-copy">Email me a copy</label>
+                  </div>
+                  <div className="6u$ 12u$(small)">
+                    <input type="checkbox" id="demo-human" name="demo-human" checked/>
+                    <label htmlFor="demo-human">Not a robot</label>
+                  </div>
+                  <div className="12u$">
+                      <textarea
+                        name="demo-message"
+                        id="demo-message"
+                        placeholder="Enter your message"
+                        rows={6}
+                      />
+                  </div>
+                  <div className="12u$">
+                    <ul className="actions">
+                      <li><input type="submit" value="Send Message" className="special"/></li>
+                      <li><input type="reset" value="Reset"/></li>
+                    </ul>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </section>
+        </article>
 
         {/*<!-- Footer -->*/}
         <footer id="footer">

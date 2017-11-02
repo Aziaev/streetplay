@@ -1,6 +1,6 @@
 import { Card, CardHeader, CardText } from 'material-ui/Card';
 import * as React from 'react';
-import { UserCardStyle } from '../../styled';
+import { UserCardStyle } from '../../style/index';
 
 class UserCard extends React.Component<UserCardProps> {
     constructor(props: UserCardProps) {

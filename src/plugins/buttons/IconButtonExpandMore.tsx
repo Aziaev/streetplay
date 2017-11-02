@@ -1,7 +1,7 @@
 import IconButton from 'material-ui/IconButton';
 import { NavigationExpandMore } from 'material-ui/svg-icons';
 import * as React from 'react';
-import { IconButtonExpandMoreStyle } from '../../styled';
+import { IconButtonExpandMoreStyle } from '../../style/index';
 
 const IconButtonExpandMore = (props: IconButtonExpandMoreProps) => (
     <div>

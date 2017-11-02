@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Input } from '../../styled';
+import { Input } from '../../style/index';
 
 class Dropdown extends React.Component<MyDropdownProps, MyDropdownState> {
 
