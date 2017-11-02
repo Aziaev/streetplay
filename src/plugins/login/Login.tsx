@@ -7,21 +7,21 @@ import TextField from 'material-ui/TextField';
 import * as React from 'react';
 import { Component } from 'react';
 import {
-    LOGIN_DIALOG_LINK_LABEL,
-    LOGIN_DIALOG_TEXT_FIELD_LOGIN_HINT,
-    LOGIN_DIALOG_TEXT_FIELD_LOGIN_LABEL,
-    LOGIN_DIALOG_TEXT_FIELD_PASSWORD_HINT,
-    LOGIN_DIALOG_TEXT_FIELD_PASSWORD_LABEL,
-    LOGIN_DIALOG_TITLE,
+  LOGIN_DIALOG_LINK_LABEL,
+  LOGIN_DIALOG_TEXT_FIELD_LOGIN_HINT,
+  LOGIN_DIALOG_TEXT_FIELD_LOGIN_LABEL,
+  LOGIN_DIALOG_TEXT_FIELD_PASSWORD_HINT,
+  LOGIN_DIALOG_TEXT_FIELD_PASSWORD_LABEL,
+  LOGIN_DIALOG_TITLE,
 } from '../../const/const';
 import {
-    LoginDialogActionsStyle,
-    LoginDialogBodyStyle,
-    LoginDialogButtonsStyle,
-    LoginDialogLink,
-    LoginDialogStyle,
-    LoginDialogTextFieldStyle
-} from '../../styled';
+  LoginDialogActionsStyle,
+  LoginDialogBodyStyle,
+  LoginDialogButtonsStyle,
+  LoginDialogLink,
+  LoginDialogStyle,
+  LoginDialogTextFieldStyle
+} from '../../style/index';
 
 export default class Login extends Component {
     state = {
