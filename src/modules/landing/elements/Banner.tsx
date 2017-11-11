@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { BannerProps, BannerState } from '../interfaces';
 
 class Banner extends React.Component<BannerProps, BannerState> {
   constructor( props: BannerProps ) {

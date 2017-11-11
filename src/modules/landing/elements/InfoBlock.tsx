@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { InfoBlockProps, InfoBlockState } from '../interfaces';
 
 class InfoBlock extends React.Component<InfoBlockProps, InfoBlockState> {
   constructor( props: InfoBlockProps ) {

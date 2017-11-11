@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { headerStyle } from '../../../style/index';
 import Spotlight from './Spotlight';
+import { PopularProps, PopularState } from '../interfaces';
 
 class Popular extends React.Component<PopularProps, PopularState> {
   constructor( props: PopularProps ) {

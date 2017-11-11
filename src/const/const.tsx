@@ -38,3 +38,4 @@ export const CTA_BUTTON_TITLE = 'Начать';
 export const MORE_BUTTON_TITLE = 'Узнать еще...';
 
 // Map
+export const MAP_TITLE = 'Карта выступлений артистов';

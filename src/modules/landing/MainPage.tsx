@@ -13,17 +13,18 @@ import {
   INFO_BLOCK_TITLE,
   MAIN_APP_DESCRIPTION,
   MAIN_APP_TITLE,
+  MAP_TITLE,
   MORE_BUTTON_TITLE,
   POPULAR_TITLE
 } from '../../const/const';
-import { mapsStyle } from '../../style/index';
-import SimpleMap from '../../components/Map/SimpleMap';
 import Banner from './elements/Banner';
 import InfoBlock from './elements/InfoBlock';
 import { mockDetails, mockUsers } from '../../const/mock';
 import Popular from './elements/Popular';
 import Details from './elements/Details';
 import CallToAction from './elements/CallToAction';
+import MapElement from './elements/MapElement';
+import { defaultCenter, defaultZoom } from '../../settings';
 
 class MainPage extends React.Component<MyWrapperProps, MyWrapperState> {
   constructor( props: MyWrapperProps ) {
@@ -92,24 +93,12 @@ class MainPage extends React.Component<MyWrapperProps, MyWrapperState> {
           moreButtonTitle={MORE_BUTTON_TITLE}
         />
 
-        <MapElement/>
-
-        <div id="map">
-          <article>
-            <section className="wrapper style5">
-              <div className="inner">
-                <header className="major" style={{ textAlign: 'center' }}>
-                  <h2>Карта выступлений музыкантов</h2>
-                </header>
-              </div>
-            </section>
-          </article>
-          <section id="map" style={{ marginTop: 0 }} className="bottommargin-lg">
-            <div style={mapsStyle.mapContainer}>
-              <SimpleMap/>
-            </div>
-          </section>
-        </div>
+        <MapElement
+          defaultCenter={defaultCenter}
+          defaultZoom={defaultZoom}
+          title={MAP_TITLE}
+          people={mockUsers}
+        />
 
         {/*<!-- Feedback -->*/}
         <article id="feedback">

@@ -1,4 +1,9 @@
 import * as React from 'react';
+import { MarkerProps, MarkerState } from '../interfaces';
+
+const PlaceMark = ( { title } ) => (
+  <i className="icon fa-map-marker" style={{ color: '#ff7070', fontSize: 40 }}/>
+);
 
 class Marker extends React.Component<MarkerProps, MarkerState> {
   constructor( props: MarkerProps ) {
@@ -14,9 +19,11 @@ class Marker extends React.Component<MarkerProps, MarkerState> {
   render() {
 
     return (
-      <div>
-        {this.state.title}
-      </div>
+      <PlaceMark
+        title={this.state.title}
+        lat={this.state.lat}
+        lng={this.state.lng}
+      />
     );
   }
 }

@@ -1,3 +1,5 @@
+import { Coords } from 'google-map-react';
+
 interface BannerProps {
   title: string;
   description: string;
@@ -32,15 +34,10 @@ interface User {
   genre: string;
   city: string;
   description: string;
-  location: Location;
+  location: Coords;
   rating: number;
   pointType: string;
   imgUrl: string;
-}
-
-interface Location {
-  lat: string;
-  lng: string;
 }
 
 interface PopularProps {
@@ -102,10 +99,6 @@ interface CTAProps {
   description?: string;
   ctaButtonTitle?: string;
   moreButtonTitle?: string;
-
-  ctaButtonAction?(): void;
-
-  moreButtonAction?(): void;
 }
 
 interface CTAState {
@@ -113,22 +106,34 @@ interface CTAState {
   description?: string;
   ctaButtonTitle?: string;
   moreButtonTitle?: string;
-
-  ctaButtonAction?(): void;
-
-  moreButtonAction?(): void;
 }
 
 interface MarkerProps {
-  title: string;
-  lat: string;
-  lng: string;
+  title?: string;
+  lat: number;
+  lng: number;
   markerType?: string;
 }
 
 interface MarkerState {
-  title: string;
-  lat: string;
-  lng: string;
+  title?: string;
+  lat: number;
+  lng: number;
   markerType?: string;
+}
+
+interface MapElementProps {
+  title: string;
+  description?: string;
+  people: User[];
+  defaultCenter: Coords;
+  defaultZoom: number;
+}
+
+interface MapElementState {
+  title: string;
+  description?: string;
+  people: User[];
+  defaultCenter: Coords;
+  defaultZoom: number;
 }

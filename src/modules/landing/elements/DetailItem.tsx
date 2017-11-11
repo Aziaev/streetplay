@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { DetailItemProps, DetailItemState } from '../interfaces';
 
 class DetailItem extends React.Component<DetailItemProps, DetailItemState> {
   constructor( props: DetailItemProps ) {

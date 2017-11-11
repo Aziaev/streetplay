@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { SpotlightProps, SpotlightState } from '../interfaces';
 
 class Spotlight extends React.Component<SpotlightProps, SpotlightState> {
   constructor( props: SpotlightProps ) {

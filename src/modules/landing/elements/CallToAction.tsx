@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { CTAProps, CTAState } from '../interfaces';
 
 class CallToAction extends React.Component<CTAProps, CTAState> {
   constructor( props: CTAProps ) {
@@ -7,9 +8,7 @@ class CallToAction extends React.Component<CTAProps, CTAState> {
       title: this.props.title,
       description: this.props.description,
       ctaButtonTitle: this.props.ctaButtonTitle,
-      ctaButtonAction: this.state.ctaButtonAction,
       moreButtonTitle: this.props.moreButtonTitle,
-      moreButtonAction: this.props.moreButtonAction,
     };
   }
 
@@ -28,7 +27,6 @@ class CallToAction extends React.Component<CTAProps, CTAState> {
               <a
                 href="#"
                 className="button fit special"
-                onClick={this.state.ctaButtonAction}
               >
                 {this.state.ctaButtonTitle}
               </a>
@@ -39,7 +37,6 @@ class CallToAction extends React.Component<CTAProps, CTAState> {
               <a
                 href="#"
                 className="button fit"
-                onClick={this.state.moreButtonAction}
               >
                 {this.state.moreButtonTitle}
               </a>
