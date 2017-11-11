@@ -1,7 +1,29 @@
 import * as React from 'react';
-import { APP_NAME, MAIN_APP_DESCRIPTION, MAIN_APP_TITLE } from '../../const/const';
-import { headerStyle, mapsStyle } from '../../style/index';
+import {
+  APP_NAME,
+  BANNER_DESCRIPTION,
+  BUTTON_HREF,
+  BUTTON_TITLE,
+  CTA_BUTTON_TITLE,
+  CTA_DESCRIPTION,
+  CTA_TITLE,
+  GO_NEXT_TITLE,
+  GO_NEXT_URL,
+  INFO_BLOCK_DESCRIPTION,
+  INFO_BLOCK_TITLE,
+  MAIN_APP_DESCRIPTION,
+  MAIN_APP_TITLE,
+  MORE_BUTTON_TITLE,
+  POPULAR_TITLE
+} from '../../const/const';
+import { mapsStyle } from '../../style/index';
 import SimpleMap from '../../components/Map/SimpleMap';
+import Banner from './elements/Banner';
+import InfoBlock from './elements/InfoBlock';
+import { mockDetails, mockUsers } from '../../const/mock';
+import Popular from './elements/Popular';
+import Details from './elements/Details';
+import CallToAction from './elements/CallToAction';
 
 class MainPage extends React.Component<MyWrapperProps, MyWrapperState> {
   constructor( props: MyWrapperProps ) {
@@ -17,7 +39,6 @@ class MainPage extends React.Component<MyWrapperProps, MyWrapperState> {
   }
 
   render() {
-
     return (
       <div id="page-wrapper">
 
@@ -41,171 +62,37 @@ class MainPage extends React.Component<MyWrapperProps, MyWrapperState> {
           </nav>
         </header>
 
-        <section id="banner">
-          <div className="inner">
-            <h2>{APP_NAME}</h2>
-            <p>Сервис для уличных артистов и их зрителей</p>
-            <br/>
-            <ul className="actions">
-              <li><a href="#" className="button special">Начать пользоваться</a></li>
-            </ul>
-          </div>
-          <a href="#one" className="more scrolly">Узнать побольше...</a>
-        </section>
+        <Banner
+          title={APP_NAME}
+          description={BANNER_DESCRIPTION}
+          buttonUrl={BUTTON_HREF}
+          buttonTitle={BUTTON_TITLE}
+          goNextTitle={GO_NEXT_TITLE}
+          goNextUrl={GO_NEXT_URL}
+        />
 
-        <section id="one" className="wrapper style1 special">
-          <div className="inner">
-            <header className="major">
-              <h2>StreetPlay помогает уличным артистам и зрителям найти друг друга</h2>
-              <p><strong>Зрители</strong> могут посмотреть расписание выступлений артистов, найти их на карте города
-                и пожертвовать артистам монетку. А еще и следить за любимыми артистами.<br/></p>
-              <p><strong>Артисты</strong> могут в {APP_NAME} рассказать о себе, указать на карте места и время
-                выступлений.
-                А еще и заработать денег.</p>
-            </header>
-            <ul className="icons major">
-              <li>
-                <span className="icon fa-search major style1"><span className="label">Ищи</span></span></li>
-              <li>
-                <span className="icon fa-eye major style2"><span className="label">Смотри</span></span></li>
-              <li>
-                <span className="icon fa-credit-card major style3"><span className="label">Благодари</span></span></li>
-              <li>
-                <span className="icon fa-money major style4"><span className="label">Заработай</span></span></li>
-            </ul>
-          </div>
-        </section>
+        <InfoBlock
+          title={INFO_BLOCK_TITLE}
+          description={INFO_BLOCK_DESCRIPTION}
+        />
 
-        <section id="popular" className="wrapper alt style2">
-          <section>
-            <div className="inner">
-              <header className="major" style={headerStyle}>
-                <h2>Популярные артисты</h2>
-              </header>
-            </div>
-          </section>
-          <section className="spotlight">
-            <div className="image"><img src="images/artists/guitarist.jpg" alt=""/></div>
-            <div className="content">
-              <h2>Виктор Гистраистов</h2>
-              ★★★★<br/><br/>
-              <p><strong>Жанр:</strong> музыка, игра на гитаре<br/>
-                <strong>Город:</strong> Зеленодольск<br/>
-                <strong>Описание:</strong> Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet.
-                Mauris eleifend fringilla nullam aenean mi ligula.</p>
-            </div>
-          </section>
-          <section className="spotlight">
-            <div className="image"><img src="images/artists/juggler.jpg" alt=""/></div>
-            <div className="content">
-              <h2>Уличный жонглер Миша</h2>
-              ★★★★★<br/><br/>
-              <p><strong>Жанр:</strong> Эквилибристика, жонглирование<br/>
-                <strong>Город:</strong> Чистополь<br/>
-                <strong>Описание:</strong> Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet.
-                Mauris eleifend fringilla nullam aenean mi ligula.</p>
-            </div>
-          </section>
-          <section className="spotlight">
-            <div className="image"><img src="images/artists/memes.jpg" alt=""/></div>
-            <div className="content">
-              <h2>Мим команда "Bug-makers"</h2>
-              ★★★<br/><br/>
-              <p><strong>Жанр:</strong> Мим шоу<br/>
-                <strong>Город:</strong> Казань<br/>
-                <strong>Описание:</strong> Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet.
-                Mauris eleifend fringilla nullam aenean mi ligula.</p>
-            </div>
-          </section>
-          <section className="spotlight">
-            <div className="image"><img src="images/artists/saxoman.jpg" alt=""/></div>
-            <div className="content">
-              <h2>Владимир П.</h2>
-              ★★★<br/><br/>
-              <p><strong>Жанр:</strong> музыка, игра на саксофоне<br/>
-                <strong>Город:</strong> Казань<br/>
-                <strong>Описание:</strong> Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet.
-                Mauris eleifend fringilla nullam aenean mi ligula.</p>
-            </div>
-          </section>
-          <section className="spotlight">
-            <div className="image"><img src="images/artists/violinist.jpg" alt=""/></div>
-            <div className="content">
-              <h2>Семён Сёмёнович Сёмёнов</h2>
-              ★★★★★<br/><br/>
-              <p><strong>Жанр:</strong> музыка, игра на виолонченли<br/>
-                <strong>Город:</strong> Дербышки<br/>
-                <strong>Описание:</strong> Aliquam ut ex ut augue consectetur interdum. Donec hendrerit imperdiet.
-                Mauris eleifend fringilla nullam aenean mi ligula.</p>
-            </div>
-          </section>
-        </section>
+        <Popular
+          title={POPULAR_TITLE}
+          people={mockUsers}
+        />
 
-        <section id="details" className="wrapper style3 special">
-          <div className="inner">
-            <header className="major">
-              <h2>Возможности сервиса</h2>
-            </header>
-            <p>
-              <div className="row">
-                <div className="6u 12u$(medium)">
-                  <h5>Зритель</h5>
-                </div>
-                <div className="6u$ 12u$(medium)">
-                  <h5>Артист</h5>
-                </div>
-              </div>
-            </p>
+        <Details
+          features={mockDetails}
+        />
 
-            <ul className="features">
-              <li className="icon fa-search">
-                <h3>Ищите артистов</h3>
-                <p>Каждый посетитель может на сайте найти места выступлений артистов</p>
-              </li>
-              <li className="icon fa-globe">
-                <h3>Покажите места</h3>
-                <p>Добавляйте на карту места ваших выступлений</p>
-              </li>
-              <li className="icon fa-star">
-                <h3>Подписывайтесь</h3>
-                <p>Добавляйте артистов в избранное и следите за их выступлениями</p>
-              </li>
-              <li className="icon fa-headphones">
-                <h3>Находите зрителей</h3>
-                <p>Продвигайте свои выступления среди зрителей</p>
-              </li>
-              <li className="icon fa-credit-card">
-                <h3>Благодарите артистов деньгами!</h3>
-                <p>Переводите им взносы прямо со своей карты просканировав QR-код артиста на выступлении</p>
-              </li>
-              <li className="icon fa-money">
-                <h3>Зарабатывайте деньги!</h3>
-                <p>Чем лучше выступление, тем больше денег. Зрители перечисляют деньги по вашему QR-коду</p>
-              </li>
-              <li className="icon fa-calendar-check-o">
-                <h3>Следите за расписанием</h3>
-                <p>И получайте уведомления о выступлениях артистов</p>
-              </li>
-              <li className="icon fa-line-chart">
-                <h3>Статистика</h3>
-                <p>В личном кабинете можно смотреть статистику по местам, мероприятиям и оплатам</p>
-              </li>
-            </ul>
-          </div>
-        </section>
+        <CallToAction
+          title={CTA_TITLE}
+          description={CTA_DESCRIPTION}
+          ctaButtonTitle={CTA_BUTTON_TITLE}
+          moreButtonTitle={MORE_BUTTON_TITLE}
+        />
 
-        <section id="cta" className="wrapper style4">
-          <div className="inner">
-            <header>
-              <h2>Начните пользоваться приложением сейчас!</h2>
-              <p>Нажмите кнопку, зарегистрируйтесь и вперед</p>
-            </header>
-            <ul className="actions vertical">
-              <li><a href="#" className="button fit special">Начать</a></li>
-              <li><a href="#" className="button fit">Почитать еще</a></li>
-            </ul>
-          </div>
-        </section>
+        <MapElement/>
 
         <div id="map">
           <article>
