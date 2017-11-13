@@ -1,5 +1,15 @@
 import { Coords } from 'google-map-react';
 
+interface MyWrapperProps {
+  title: string;
+  description?: string;
+}
+
+interface MyWrapperState {
+  title: string;
+  description?: string;
+}
+
 interface BannerProps {
   title: string;
   description: string;
@@ -136,4 +146,56 @@ interface MapElementState {
   people: User[];
   defaultCenter: Coords;
   defaultZoom: number;
+}
+
+interface FeedbackProps {
+  title: string;
+  description?: string;
+  namePlaceHolder?: string;
+  emailPlaceHolder?: string;
+  messagePlaceHolder?: string;
+  actionButtonTitle?: string;
+  declineButtonTitle?: string;
+}
+
+interface FeedbackState {
+  title: string;
+  description?: string;
+  namePlaceHolder?: string;
+  emailPlaceHolder?: string;
+  messagePlaceHolder?: string;
+  actionButtonTitle?: string;
+  declineButtonTitle?: string;
+}
+
+interface FooterProps {
+  twitterUrl?: string;
+  facebookUrl?: string;
+  instagramUrl?: string;
+  mailTo?: string;
+}
+
+interface FooterState {
+  twitterUrl?: string;
+  facebookUrl?: string;
+  instagramUrl?: string;
+  mailTo?: string;
+}
+
+interface HeaderProps {
+  logoText: string;
+  menuTitle: string;
+  menuItems: MenuItem[];
+}
+
+interface HeaderState {
+  logoText: string;
+  menuTitle: string;
+  menuItems: MenuItem[];
+}
+
+interface MenuItem {
+  title: string;
+  url: string;
+  disabled: boolean;
 }

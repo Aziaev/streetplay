@@ -1,5 +1,4 @@
 export const APP_NAME = 'StreetPlay';
-export const MAIN_APP_TITLE = 'Welcome to React';
 export const MAIN_APP_DESCRIPTION = 'Выбирай приложение в меню для запуска';
 export const LOGIN_DIALOG_TITLE = 'Вход на сайт';
 export const LOGIN_DIALOG_TEXT_FIELD_LOGIN_HINT = 'Логин или электропочта';
@@ -39,3 +38,15 @@ export const MORE_BUTTON_TITLE = 'Узнать еще...';
 
 // Map
 export const MAP_TITLE = 'Карта выступлений артистов';
+
+// Feedback
+export const FEEDBACK_TITLE = 'Обратная связь';
+export const FEEDBACK_DESCRIPTION = 'Пишите нам по любому поводу';
+export const FEEDBACK_NAME_PLACEHOLDER = 'Имя';
+export const FEEDBACK_EMAIL_PLACEHOLDER = 'Электропочта';
+export const FEEDBACK_MESSAGE_PLACEHOLDER = 'Введите сообщение';
+export const FEEDBACK_ACTION_BUTTON_TITLE = 'Отправить';
+export const FEEDBACK_DECLINE_BUTTON_TITLE = 'Очистить';
+
+// Menu
+export const MENU_TITLE = 'Меню';
