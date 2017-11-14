@@ -192,6 +192,7 @@ interface HeaderState {
   logoText: string;
   menuTitle: string;
   menuItems: MenuItem[];
+  headerClassName: string;
 }
 
 interface MenuItem {

@@ -2,19 +2,28 @@ import * as React from 'react';
 import { HeaderProps, HeaderState, MenuItem } from '../interfaces';
 
 class Header extends React.Component<HeaderProps, HeaderState> {
+  handleToggle = () => {
+    console.log( 'headerClassName = ' );
+    this.setState( {
+      headerClassName:
+        this.state.headerClassName === 'alt' ? '' : 'alt'
+    } );
+  }
+
   constructor( props: HeaderProps ) {
     super( props );
     this.state = {
       logoText: this.props.logoText,
       menuTitle: this.props.menuTitle,
       menuItems: this.props.menuItems,
+      headerClassName: '',
     };
   }
 
   render() {
 
     return (
-      <header id="header" className="alt">
+      <header id="header" className={this.state.headerClassName}>
         <h1><a href="/">{this.state.logoText}</a></h1>
         <nav id="nav">
           <ul>
@@ -22,11 +31,11 @@ class Header extends React.Component<HeaderProps, HeaderState> {
               <a
                 href="#menu"
                 className="menuToggle"
-                onClick={}
+                onClick={this.handleToggle}
               >
                 <span>{this.state.menuTitle}</span>
               </a>
-              <div id="menu">
+              <div id="menu" className="is-menu-visible">
                 <ul>
                   {this.state.menuItems.map( ( menuItem: MenuItem ) => (
                     <li><a href={menuItem.url}>{menuItem.title}</a></li>
