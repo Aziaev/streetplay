@@ -3,12 +3,12 @@ import { HeaderProps, HeaderState, MenuItem } from '../interfaces';
 
 class Header extends React.Component<HeaderProps, HeaderState> {
   handleToggle = () => {
-    console.log( 'headerClassName = ' );
     this.setState( {
       headerClassName:
-        this.state.headerClassName === 'alt' ? '' : 'alt'
+        this.state.headerClassName === 'alt' ? '' : 'alt',
     } );
   }
+  toggleMenu = () => this.setState( { drawerOpened: !this.state.drawerOpened } );
 
   constructor( props: HeaderProps ) {
     super( props );
@@ -17,6 +17,7 @@ class Header extends React.Component<HeaderProps, HeaderState> {
       menuTitle: this.props.menuTitle,
       menuItems: this.props.menuItems,
       headerClassName: '',
+      drawerOpened: false,
     };
   }
 

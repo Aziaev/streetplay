@@ -15,7 +15,6 @@ class Banner extends React.Component<BannerProps, BannerState> {
   }
 
   render() {
-
     return (
       <section id="banner">
         <div className="inner">

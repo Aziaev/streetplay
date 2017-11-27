@@ -1,3 +1,4 @@
+///<reference path="../../../node_modules/@types/react/index.d.ts"/>
 import * as React from 'react';
 import {
   APP_NAME,
@@ -30,10 +31,10 @@ import Popular from './elements/Popular';
 import Details from './elements/Details';
 import CallToAction from './elements/CallToAction';
 import MapElement from './elements/MapElement';
-import { defaultCenter, defaultZoom, landingPageMenuItems } from '../../settings';
+import { DATA_URL, defaultCenter, defaultZoom, landingPageMenuItems } from '../../settings';
 import Feedback from './elements/Feedback';
 import Footer from './elements/Footer';
-import { MyWrapperProps, MyWrapperState } from './interfaces';
+import { MyWrapperProps, MyWrapperState, User } from './interfaces';
 import Header from './elements/Header';
 
 class MainPage extends React.Component<MyWrapperProps, MyWrapperState> {
@@ -41,7 +42,20 @@ class MainPage extends React.Component<MyWrapperProps, MyWrapperState> {
     super( props );
     this.state = {
       title: APP_NAME,
+      data: this.props.data
     };
+  }
+
+  componentDidMount() {
+    fetch( DATA_URL )
+      .then( function ( response: any ) {
+        return response.json();
+      } )
+      .then( function ( data: User[] ) {
+        data.map( ( item ) => {
+          console.log( 'item!!!', item.id );
+        } );
+      } );
   }
 
   render() {

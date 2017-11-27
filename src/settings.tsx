@@ -31,3 +31,7 @@ export const landingPageMenuItems = [
     disabled: false
   }
 ];
+
+export const DATA_URL = 'http://192.168.43.148:8080/api/test';
+export const SWAPI_URL = 'https://swapi.co/api/people/?format=json';
+export const LOCAL_DATA_URL = 'http://localhost:8080/json/';

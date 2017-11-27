@@ -3,11 +3,13 @@ import { Coords } from 'google-map-react';
 interface MyWrapperProps {
   title: string;
   description?: string;
+  data: User[];
 }
 
 interface MyWrapperState {
   title: string;
   description?: string;
+  data: {};
 }
 
 interface BannerProps {
@@ -52,12 +54,12 @@ interface User {
 
 interface PopularProps {
   title: string;
-  people: User[];
+  people: {}[];
 }
 
 interface PopularState {
   title: string;
-  people: User[];
+  people: {}[];
 }
 
 interface SpotlightProps {
@@ -135,7 +137,7 @@ interface MarkerState {
 interface MapElementProps {
   title: string;
   description?: string;
-  people: User[];
+  people: {}[];
   defaultCenter: Coords;
   defaultZoom: number;
 }
@@ -143,7 +145,7 @@ interface MapElementProps {
 interface MapElementState {
   title: string;
   description?: string;
-  people: User[];
+  people: {}[];
   defaultCenter: Coords;
   defaultZoom: number;
 }
@@ -193,6 +195,7 @@ interface HeaderState {
   menuTitle: string;
   menuItems: MenuItem[];
   headerClassName: string;
+  drawerOpened: boolean;
 }
 
 interface MenuItem {
